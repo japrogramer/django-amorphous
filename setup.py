@@ -17,7 +17,7 @@ VERSION = __import__(PACKAGE).__version__
 # setup call
 setup(
     name=NAME,
-    packages = [PACKAGE,],
+    packages = find_packages(),
     version=VERSION,
     description=DESCRIPTION,
     long_description=read('README.rst'),
