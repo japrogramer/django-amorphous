@@ -8,7 +8,7 @@ def read(fname):
 # Info for setup
 PACKAGE = 'amorphous'
 NAME = 'django-amorphous'
-DESCRIPTION = 'a Django app for amorphous data storage and edeting'
+DESCRIPTION = 'django-amorphous unlocks the power of JsonField'
 AUTHOR = 'Jorge Perez'
 AUTHOR_EMAIL = 'japrogramer@gmail.com'
 URL = 'https://github.com/japrogramer/django-amorphous'
