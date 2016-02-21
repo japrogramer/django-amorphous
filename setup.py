@@ -11,12 +11,13 @@ NAME = 'django-amorphous'
 DESCRIPTION = 'a Django app for amorphous data storage and edeting'
 AUTHOR = 'Jorge Perez'
 AUTHOR_EMAIL = 'japrogramer@gmail.com'
-URL = 'http://localhost'
+URL = 'https://github.com/japrogramer/django-amorphous'
 VERSION = __import__(PACKAGE).__version__
 
 # setup call
 setup(
     name=NAME,
+    packages = [NAME,],
     version=VERSION,
     description=DESCRIPTION,
     long_description=read('README.rst'),
@@ -35,6 +36,7 @@ setup(
          'Programming Language :: Python',
          'Framework :: Django',
     ],
+    keywords = ['django', 'json', 'JsonField', 'amorphous']
     install_requires=[
          'django>=1.8',
          'pytz>=2014.2',
