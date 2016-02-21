@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block body %}
+    <form name="test" class="form-horizontal" method="post" action="">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <div class="control-group">
+          <div class="controls">
+            <button type="submit" class="btn">Update</button>
+          </div>
+        </div>
+    </form>
+{% endblock body %}
