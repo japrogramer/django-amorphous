@@ -36,8 +36,8 @@ setup(
          'Programming Language :: Python',
          'Framework :: Django',
     ],
-    keywords = ['django', 'json', 'JsonField', 'amorphous']
-    install_requires=[
+    keywords = ['django', 'json', 'JsonField', 'amorphous'],
+    install_requires = [
          'django>=1.8',
          'pytz>=2014.2',
     ],
