@@ -1,4 +1,7 @@
-***********************************************
+***
+=====
+Usage
+=====********************************************
 django-amorphous unlocks the power of JsonField
 ***********************************************
 
@@ -18,6 +21,7 @@ field.
 An example:
 ===========
 
+the code:
 .. code-block:: python
     # First import the class generator
     >>> from amorphous.forms import amorphous_gen
@@ -35,7 +39,7 @@ An example:
 
 Finally generate the form class from there you have two choices:
 create an instance of that class
-or form a instance initialized with data from the DB
+or form a instance initialized with data from the DB:
 
 .. code-block:: python
     >>> form_class = amorphous_gen(amorphous=json_data)
@@ -43,13 +47,13 @@ or form a instance initialized with data from the DB
     >>> form_instance = form_class(data=obj.field)
 
 To store the data, in the format expected by amorphous use the db_amorphous
-form method
+form method:
 
 .. code-block:: python
     >>> for_db = form.db_amorphous()
 
 save the object after setting the attribute, where amorphous_field is the
-name of the field that holds the amorphous data on the model
+name of the field that holds the amorphous data on the model:
 
 .. code-block:: python
     >>> setattr(model_object, amorphous_field, for_db)
@@ -60,7 +64,7 @@ Usage
 
 amorphous contains a CBV, AmorphousView that takes the name of the JsonField
 that you wish to store the amorphous data into **amorphous_field** and also
-expects the model attribute to be set.
+expects the model attribute to be set:
 
 .. code-block:: python
     >>> view = AmorphousView.as_view(
@@ -76,5 +80,6 @@ CBV.
 =====
 Tests
 =====
+running tests:
 .. code-block:: bash
     $ manage.py test amorphous
