@@ -93,7 +93,10 @@ running tests:
 
 .. code-block:: bash
 
+    # just amorphous' tests
     $ manage.py test amorphous
+    # amorphous' tests and your tests
+    $ manage.py test . amorphous
 
 =================
 The possibilities
