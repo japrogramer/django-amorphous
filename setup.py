@@ -1,7 +1,10 @@
 import os
 from setuptools import setup, find_packages
 
+
 CURRENT_DIR = os.path.dirname(__file__)
+
+
 def read(fname):
     return open(os.path.join(CURRENT_DIR, fname)).read()
 
@@ -17,7 +20,7 @@ VERSION = __import__(PACKAGE).__version__
 # setup call
 setup(
     name=NAME,
-    packages = find_packages(),
+    packages=find_packages(),
     version=VERSION,
     description=DESCRIPTION,
     long_description=read('README.rst'),
@@ -36,8 +39,8 @@ setup(
          'Programming Language :: Python',
          'Framework :: Django',
     ],
-    keywords = 'django json JsonField amorphous',
-    install_requires = [
+    keywords='django json JsonField amorphous',
+    install_requires=[
          'django>=1.8',
          'pytz>=2014.2',
     ],

@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 from django.shortcuts import render
-from django.views.generic.detail import SingleObjectMixin, SingleObjectTemplateResponseMixin
+from django.views.generic.detail import (
+        SingleObjectMixin,
+        SingleObjectTemplateResponseMixin)
 from django.views.generic.edit import FormMixin, ProcessFormView
 from django.http import HttpResponseRedirect
 from django.core.exceptions import ImproperlyConfigured

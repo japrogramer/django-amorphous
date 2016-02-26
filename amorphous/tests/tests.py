@@ -92,7 +92,9 @@ class TestAmorphousView(TestCase):
         # this is the post response part
         data = self.data
         request_post = self.factory.post('/?pk=%s' % self.test_model.pk, data)
-        response_post = view(request_post, **{**request_post.GET.dict(), **request_post.POST.dict()})
+        response_post = view(
+                request_post,
+                **{**request_post.GET.dict(), **request_post.POST.dict()})
         changed_object = TestModel.objects.get(pk=self.test_model.pk).metadata
         # Did the view make the changes?
         self.assertEqual(response.status_code, 200)
