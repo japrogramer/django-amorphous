@@ -48,6 +48,7 @@ or create a  form with initial values set  with data from the DB:
     # This creates a form class where the initial values are the values stored
     # in the DB
     # Note: the form is not bound
+    # Note: Here obj could be a model and field is the JSONField to store the data for later use
     >>> form_instance = amorphous_gen(obj.field)
     # this is usefull when dealing with post and get methods
 
@@ -64,7 +65,10 @@ name of the field that holds the amorphous data on the model:
 
 .. code-block::python
 
+   >>> # Here I show how a form can be stored in the model, where amorphous_field is a JSONField
    >>> setattr(model_object, amorphous_field, for_db)
+   >>> # Logically you could also transport for_db, whish is the output of form.db_amorphous(),
+   >>> # over the wire to a different api or service.
 
 =====
 Usage
